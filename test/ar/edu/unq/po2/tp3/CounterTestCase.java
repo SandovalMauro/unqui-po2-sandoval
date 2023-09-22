@@ -44,6 +44,7 @@ public class CounterTestCase {
 		// Getting the even occurrences
 		int amount = counter.getEvenOcurrences();
 		
+		//aca esta pidiendo la cantidad de pares pero los pares son solamente 1
 		// I check the amount is the expected one
 		assertEquals(amount, 9);
 	}
