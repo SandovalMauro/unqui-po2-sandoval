@@ -12,11 +12,13 @@ class PersonaTest {
 	
 	private Persona mauro;
 	private Persona luisa;
+	private PersonaConApellido lucas;
 	
 	@BeforeEach
 	public void setUp() {
 		mauro = Persona.crearPersona("Mauro", LocalDate.of(1996,8,3));
 		luisa = Persona.crearPersona("Luisa", LocalDate.of(1944,11,19));
+		lucas = new PersonaConApellido("Lucas", "Sandoval", LocalDate.of(1997, 7, 29));
 	}
 
 	@Test
@@ -34,5 +36,15 @@ class PersonaTest {
 	@Test
 	public void mauroEsMenorQueLuisa() {
 		assertTrue(mauro.menorQue(luisa));
+	}
+	
+	@Test
+	public void lucasEsMenorQueMauro() {
+		assertTrue(lucas.menorQue(mauro));
+	}
+	
+	@Test
+	public void mauroNoEsMenorQueLucas() {
+		assertFalse(mauro.menorQue(lucas));
 	}
 }
