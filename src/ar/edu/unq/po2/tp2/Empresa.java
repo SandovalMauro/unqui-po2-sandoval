@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Empresa {
 	private String cuit;
 	private String nombre;
-	private Collection<Empleado> empleados = new ArrayList<>();
-	private Collection<ReciboDeHaberes> recibos = new ArrayList<>();
+	private Collection<Empleado> empleados = new ArrayList<Empleado>();
+	private Collection<ReciboDeHaberes> recibos = new ArrayList<ReciboDeHaberes>();
 
 	public String getCuit() {
 		return cuit;
